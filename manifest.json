@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Toss Invest Plus",
+  "version": "1.0.0",
+  "description": "토스증권의 다양한 편의 기능을 제공하는 비공식 확장 프로그램입니다.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.tossinvest.com/*",
+        "https://tossinvest.com/*",
+        "https://*.tossinvest.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

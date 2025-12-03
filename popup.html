@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toss Invest Plus 설정</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+    
+    .header {
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e9ecef;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #212529;
+    }
+    
+    .version {
+      font-size: 12px;
+      color: #868e96;
+      margin-top: 4px;
+    }
+    
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .feature-item {
+      background: white;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .feature-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    
+    .feature-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: #212529;
+    }
+    
+    .feature-description {
+      font-size: 12px;
+      color: #868e96;
+      line-height: 1.4;
+    }
+    
+    .toggle {
+      position: relative;
+      width: 40px;
+      height: 20px;
+    }
+    
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .3s;
+      border-radius: 20px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
+      background-color: #0064ff;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+    
+    .footer {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid #e9ecef;
+      text-align: center;
+      font-size: 11px;
+      color: #868e96;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🚀 Toss Invest Plus</h1>
+    <div class="version">버전 1.0.0</div>
+  </div>
+  
+  <div class="feature-list">
+    <div class="feature-item">
+      <div class="feature-header">
+        <span class="feature-name">플로팅 패널</span>
+        <label class="toggle">
+          <input type="checkbox" id="floatPanel" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="feature-description">
+        차트 위에 커서 가격, 현재가, 가격차를 실시간으로 표시합니다.
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    페이지를 새로고침하면 설정이 적용됩니다.
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
